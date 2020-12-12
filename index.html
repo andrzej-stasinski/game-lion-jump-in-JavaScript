@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/game.css">
+    <title>Game Jumper Lion</title>
+</head>
+<body>
+
+  <div class="container">
+   
+    <header class='header'>
+      <h2>Game Jumper Lion</h2>      
+    </header>
+
+
+    <!-- game -->
+    <div class="game">
+        <img id="lion1" style="display:none;" src="./img/game/lion_1.png" alt="lion_1"/>
+        <img id="lion2" style="display:none;" src="./img/game/lion_2.png" alt="lion_2"/>
+        <img id="lion3" style="display:none;" src="./img/game/lion_3.png" alt="lion_3"/>
+        <img id="lion_fly_up" style="display:none;" src="./img/game/lion_fly_up.png" alt="lion_fly_up"/>
+        <img id="lion_fly_down" style="display:none;" src="./img/game/lion_fly_down.png" alt="lion_fly_down"/>
+        <img id="ground" style="display:none;" src="./img/game/frontimg.jpg" alt="frontimg"/>
+        <div id="gameDiv" class="gameDiv">
+          <span id="closeGame" class="closeGame"><i class="fas fa-times"></i></span>
+          <h2>Jumper</h2>
+          <div class="jumper-level">
+            <div class="userName"></div>
+            <div>Level: <span id="levelShow">1</span></div>
+          </div>
+          <div>Your final score: 
+              <span id="yourScoreFinal">0</span><span id="yourScore"></span>
+          </div>
+          <div id="boardDiv"></div>
+          <div class="game_buttons">
+            <button id="startButton" class="startButton">Start game</button>
+            <button id="jumperButton" class="jumperButton" disabled> Jump  </button>
+            <button id="resetButton" class="resetButton" disabled>Reset game</button>        
+          </div>
+        </div>
+    </div>
+
+    <!-- mail -->
+    <div class="mail">
+      <div class="mail__description"> 
+        <p>
+          To play you must enter email
+        </p>
+        <h3 data-en="Enter your email address:">Enter your e-mail:</h3>
+      </div>
+      <div id="message" class="mail_message"></div>
+      <div class="mail__wrapper">
+
+        <form id="mail__form">
+          <input class="mail__input" type="email" id="email" name="email" required >
+          <div>
+            <button type="button" id="btnShowGame" class="btnShowGame" disabled><span data-en="Show game">Pokaż grę</span></button>
+            <button type="submit" id="confirm"><span data-en="Save">Zapisz</span></button>             
+          </div>
+        </form>
+      </div>
+    </div>
+    
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; CopyRight 2020 | All right recerved | game made by Andrzej Stasiński </p>
+    </footer> 
+
+  </div>      
+  <!-- end - container -->
+
+  <!-- script JS game -->
+  <script src="./js/sounds.js"></script>
+  <script src="./js/game.js"></script>
+
+</body>
+</html>
